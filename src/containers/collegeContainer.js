@@ -1,12 +1,11 @@
 import React, { Component } from 'react'
+import collegeList from '../components/collegeList'
 
 export default class collegeContainer extends Component {
     render() {
         return (
             <div>
-                <h1>
-                    This is a College Container
-                </h1>
+                <collegeList />
             </div>
         )
     }

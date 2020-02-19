@@ -2,7 +2,7 @@ import React from 'react'
 import { Card , Image , Button } from 'semantic-ui-react'
 import { Link } from "react-router-dom";
 
-const collegeCard = props =>  (
+const CollegeCard = props =>  (
       <Card>
       <Card.Content>
         <Image
@@ -12,7 +12,8 @@ const collegeCard = props =>  (
         /> 
         <Card.Header>{props.college.name}</Card.Header>
         <Card.Meta><strong>{props.college.location}</strong></Card.Meta>
-        <Card.Meta><strong>{props.college.tuition}</strong></Card.Meta>
+        <Card.Meta><strong>{props.college.tuition}</strong></Card.Meta><Card.Meta><strong>{props.college.overview}</strong></Card.Meta>
+        <Card.Meta><strong>{props.college.website}</strong></Card.Meta>
       </Card.Content> 
       <Link className ="item" to={`/colleges/${props.college.college_id}`}> 
       <Card.Content extra>
@@ -26,4 +27,4 @@ const collegeCard = props =>  (
     </Card> 
   ) ; 
   
-   export default collegeCard
+   export default CollegeCard

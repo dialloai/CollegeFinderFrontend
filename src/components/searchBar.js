@@ -3,7 +3,7 @@ import {connect} from 'react-redux'
 import {onSearch} from '../redux/actionCreators' 
 
 
- const  searchBar = props  => (
+ const  SearchBar = props  => (
     <div className="ui icon input">
     <input type="text" 
     placeholder=" " 
@@ -19,4 +19,4 @@ import {onSearch} from '../redux/actionCreators'
   })
   
 
-export default connect(mapStateToProps,{onSearch})(searchBar)
+export default connect(mapStateToProps,{onSearch})(SearchBar)

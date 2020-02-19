@@ -1,6 +1,6 @@
 import '../App.css';
 import { Route , Switch , withRouter , Redirect} from "react-router-dom"
-import collegeContainer from './collegeContainer'
+import CollegeList from '../components/CollegeList'
 import {connect} from 'react-redux'
 import {fetchingColleges } from '../redux/actionCreators'
 import React, { Component } from 'react'
@@ -17,7 +17,7 @@ class App extends Component {
     return (
       <div>
         <Switch>
-        <Route path ="/colleges" component={collegeContainer}  />
+        <Route path ="/colleges" component={CollegeList}  />
         </Switch>
       </div>
     )

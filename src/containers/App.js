@@ -1,9 +1,10 @@
 import '../App.css';
 import { Route , Switch , withRouter , Redirect} from "react-router-dom"
-import CollegeList from '../components/CollegeList'
+import collegeList from '../components/collegeList'
 import {connect} from 'react-redux'
 import {fetchingColleges } from '../redux/actionCreators'
 import React, { Component } from 'react'
+import collegeInfo from '../components/collegeInfo'
 
 
 
@@ -17,7 +18,11 @@ class App extends Component {
     return (
       <div>
         <Switch>
-        <Route path ="/colleges" component={CollegeList}  />
+        <Route exact path ='/' component={collegeList} />
+
+        {/* <Route exact path ='/' render={() => this.props.user ? <CurrencyList /> : <Redirect to = '/login' /> } /> */}
+        {/* <Route path ="/colleges" component={collegeList}  /> */}
+        <Route path="/colleges/:collegeId" component={collegeInfo} />
         </Switch>
       </div>
     )

@@ -1,27 +1,27 @@
 import React from 'react'
-import CollegeCard from './CollegeCard'
+import Collegecard from './Collegecard'
 import {connect} from 'react-redux'
 import {Grid, Card , Segment} from 'semantic-ui-react'
 import SearchBar from './SearchBar'
 
 
-const CollegeList = props => props.loading ? <p>Loading Colleges...</p> : (
+const collegeList = props => props.loading ? <p>Loading Colleges...</p> : (
 
     <div className ="ui container">
         <div> 
             <SearchBar /> 
            <br /> 
            <br /> 
-            <Grid columns="three" divided className={
-                props.colleges.filter(college => college.name.toLowerCase().
-                includes(props.searchText.toLowerCase())).length === 0 ? 'empty-row' : 'default'
-            }>
-            <Segment style={{overflow: 'auto', maxHeight: 350  , width:'100%'}} >
+            {/* <Grid columns="three" divided className={
+                // props.colleges.filter(college => college.name.toLowerCase().
+                // includes(props.searchText.toLowerCase())).length === 0 ? 'empty-row' : 'default'
+            }> */}
+            {/* <Segment style={{overflow: 'auto', maxHeight: 350  , width:'100%'}} > */}
 
-            {
+            {/* {
                 props.colleges.map(college=> college.name.toLowerCase().
                 includes(props.searchText.toLowerCase())).length === 0 ? <h1> No Results Found</h1> : null 
-            }
+            } */}
             <Card.Group itemsPerRow={5}>
             {/* { props.colleges.map(college => college.name.toLowerCase().includes(props.searchText.toLowerCase()))
             .map(college => (
@@ -32,13 +32,14 @@ const CollegeList = props => props.loading ? <p>Loading Colleges...</p> : (
 
             {
                 props.colleges.map(college =>
-                    <CollegeCard
+                    
+                    <Collegecard
                     key={college.id}
                     college={college}/>)
             }
             </Card.Group>
-            </Segment>
-            </Grid>
+            {/* </Segment> */}
+            {/* </Grid> */}
         </div>
     </div> 
 )
@@ -50,4 +51,4 @@ const mapStateToProps = (store) => ({
 }
 );
 
-export default connect(mapStateToProps)(CollegeList)
+export default connect(mapStateToProps)(collegeList)

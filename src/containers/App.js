@@ -7,7 +7,7 @@ import React, { Component } from 'react'
 import collegeInfo from '../components/collegeInfo'
 
 
-
+//app with redux
 class App extends Component {
   
   componentDidMount(){

@@ -6,7 +6,7 @@ import {fetchingColleges } from '../redux/actionCreators'
 import React, { Component } from 'react'
 import collegeInfo from '../components/collegeInfo'
 
-
+//latest
 //app with redux
 class App extends Component {
   
